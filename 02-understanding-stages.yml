@@ -26,7 +26,7 @@ stages:
   jobs:
   - job: Job1
     steps:
-      - bash: echo $environment)Devdeploy Job 1
+      - bash: echo $(environment)Devdeploy Job 1
   - job: Job2
     steps:
       - bash: echo Devdeploy Job 2
