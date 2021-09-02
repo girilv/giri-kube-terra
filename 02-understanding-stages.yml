@@ -26,7 +26,7 @@ stages:
       - bash: node --version
       - bash: python --version
       - bash: mvn --version
-      - bash: ls -R $(System.ArtifactWorkingDirectory)
+      - bash: ls -R $(System.ArtifactStagingDirectory)
       - task: CopyFiles@2
         inputs:
           SourceFolder: '$(System.DefaultWorkingDirectory)'
@@ -34,8 +34,12 @@ stages:
             **/*.yml
             **/*.tf
           TargetFolder: '$(System.ArtifactStagingDirectory)'
-      - bash: ls -R $(System.ArtifactWorkingDirectory)
-
+      - bash: ls -R $(System.ArtifactStagingDirectory)
+      - task: PublishBuildArtifacts@1
+        inputs:
+          PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+          ArtifactName: 'drop'
+          publishLocation: 'Container'
 
 # - stage: DevDeploy
 #   variables:
