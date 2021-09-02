@@ -22,6 +22,20 @@ stages:
       - bash: echo $(Build.BuildId)
       - bash: echo $(Build.SourceBranchName)
       - bash: ls -R $(System.DefaultWorkingDirectory)
+      - bash: java -version
+      - bash: node --version
+      - bash: python --version
+      - bash: mvn --version
+      - bash: ls -R $(System.ArtifactWorkingDirectory)
+      - task: CopyFiles@2
+        inputs:
+          SourceFolder: '$(System.DefaultWorkingDirectory)'
+          Contents: |
+            **/*.yml
+            **/*.tf
+          TargetFolder: '$(System.ArtifactStagingDirectory)'
+      - bash: ls -R $(System.ArtifactWorkingDirectory)
+
 
 # - stage: DevDeploy
 #   variables:
