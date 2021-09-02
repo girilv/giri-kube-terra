@@ -28,6 +28,8 @@ stages:
         deploy:
           steps:
           - script: echo deploy to Dev
+- stage: QADeploy
+  jobs:
   - deployment: QADeployJob
     environment: QA
     strategy:
@@ -35,6 +37,8 @@ stages:
         deploy:
           steps:
           - script: echo deploy to QA
+- stage: ProdDeploy
+  jobs:
   - deployment: ProdDeployJob
     environment: Prod
     strategy:
@@ -42,5 +46,5 @@ stages:
         deploy:
           steps:
           - script: echo deploy to Prod
-
-
+  
+  
