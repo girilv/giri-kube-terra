@@ -34,6 +34,14 @@ steps:
  
 - task: TerraformCLI@0
   inputs:
+    command: 'forceunlock'
+    allowTelemetryCollection: true
+    lockID: '1m.terraform.lock.hcl'
+
+
+
+- task: TerraformCLI@0
+  inputs:
     command: 'apply'
     workingDirectory: '$(System.DefaultWorkingDirectory)/configuration/iaac/azure/kubernetes'
     environmentServiceName: 'azure_kubernetes'
