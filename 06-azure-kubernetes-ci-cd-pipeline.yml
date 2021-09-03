@@ -61,7 +61,7 @@ stages:
           action: 'deploy'
           kubernetesServiceConnection: 'azure-kubernetes-connection'
           namespace: 'default'
-          manifests: '$(System.ArtifactDirectory)/configuration/kubernetes/deployment.yaml'
+          manifests: '$(Build.ArtifactDirectory)/configuration/kubernetes/deployment.yaml'
           containers: 'girilv/currency-exchange-devops:$(tag)'
           
 #Stage 1
