@@ -36,6 +36,7 @@ steps:
   inputs:
     command: 'forceunlock'
     allowTelemetryCollection: true
+    lockID: 'kubernetes-dev.tfstate'
 
 
 
