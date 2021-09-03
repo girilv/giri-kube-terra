@@ -31,12 +31,6 @@ steps:
     backendAzureRmContainerName: 'stgacctgiri2021container'
     backendAzureRmKey: 'kubernetes-dev.tfstate'
     allowTelemetryCollection: true
- 
-- task: TerraformCLI@0
-  inputs:
-    command: 'forceunlock'
-    allowTelemetryCollection: true
-    lockID: 'kubernetes-dev.tfstate'
 
 
 
