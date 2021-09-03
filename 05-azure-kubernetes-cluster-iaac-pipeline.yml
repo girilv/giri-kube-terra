@@ -36,7 +36,6 @@ steps:
   inputs:
     command: 'forceunlock'
     allowTelemetryCollection: true
-    lockID: '1m.terraform.lock.hcl'
 
 
 
