@@ -52,9 +52,7 @@ stages:
         inputs:
           buildType: 'current'
           artifactName: 'manifests'
-          itemPattern: 
-            -'**/*.yml'
-            - '**/*.yaml'
+          itemPattern: '**/*.yaml'
           targetPath: '$(System.ArtifactsDirectory)'
 
 
