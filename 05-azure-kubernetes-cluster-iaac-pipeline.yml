@@ -28,8 +28,8 @@ steps:
     ensureBackend: true
     backendAzureRmResourceGroupName: 'terraform-backend-rg'
     backendAzureRmResourceGroupLocation: 'eastus'
-    backendAzureRmStorageAccountName: 'storageaccountgirikube2021'
-    backendAzureRmContainerName: 'storageaccountgirikube2021cont'
+    backendAzureRmStorageAccountName: 'stgaccgiri2021'
+    backendAzureRmContainerName: 'stgacctgiri2021container'
     backendAzureRmKey: 'kubernetes-dev.tfstate'
     allowTelemetryCollection: true
  
